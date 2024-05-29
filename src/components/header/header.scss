@@ -1,0 +1,22 @@
+.mainNav {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px #00000044;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  &__item {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

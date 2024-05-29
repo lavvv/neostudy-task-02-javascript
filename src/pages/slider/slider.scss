@@ -1,0 +1,58 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  &__container {
+    display: flex;
+    max-width: 1300px;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    overflow-x: hidden;
+  }
+
+  &__list {
+    padding: 5.5rem;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #f0f0f8;
+  }
+
+  &__caption {
+    font-size: 0.8rem;
+  }
+
+  &__image {
+    max-width: 300px;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    margin-right: 0;
+    gap: 0.5rem;
+    font-size: 0;
+  }
+
+  &__button {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.4rem;
+    border: 1px solid lightblue;
+    border-radius: 50%;
+
+    background-color: lightblue;
+    cursor: pointer;
+
+    &--disabled {
+      background-color: unset;
+      border-color: red;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.currencyConverter {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+
+  &__lastUpdate {
+    justify-self: right;
+    font-size: 0.7rem;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem;
+    row-gap: 0.5rem;
+  }
+
+  &__exchangeRatesList {
+    display: grid;
+    gap: 0.5rem 3rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: fit-content;
+  }
+
+  &__currencyValue {
+    font-weight: bold;
+  }
+
+  &__figure {
+    justify-self: right;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__img {
+      display: none;
+    }
+
+    &__section {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+  }
+}

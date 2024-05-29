@@ -1,0 +1,60 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  background-color: #f0f0f0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__label {
+    &::after {
+      color: red;
+      content: " *";
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+
+    &--error {
+      border-color: red;
+    }
+
+    &:focus {
+      outline: 1px solid gray;
+    }
+  }
+
+  &__error {
+    margin-bottom: 0.5rem;
+    color: red;
+  }
+
+  &__button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+
+    background-color: #2b68e2;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}

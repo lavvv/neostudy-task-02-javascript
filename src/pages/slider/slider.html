@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="module" src="../../components/header/header.js"></script>
+    <script type="module" src="./slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Slider</title>
+  </head>
+  <body>
+    <main>
+      <section class="slider">
+        <div class="slider__container" id="slider__container">
+          Loading...
+          <ul class="slider__list"></ul>
+        </div>
+        <div class="slider__buttons">
+          <button class="slider__button" id="slider__buttonPrev">&larr;</button>
+          <button class="slider__button" id="slider__buttonNext">&rarr;</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

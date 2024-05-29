@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=2, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="module" src="../../components/header/header.js"></script>
+    <script type="module" src="./form.js"></script>
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <section class="loginForm loginForm__container">
+        <h2 class="loginForm__title">Contact Information</h2>
+        <form class="loginForm__form" onsubmit="">
+          <label for="loginForm__name" class="loginForm__label"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            id="loginForm__name"
+            class="loginForm__input"
+            placeholder="Ivanov Ivan Ivanovich"
+          />
+          <p class="loginForm__error" id="loginForm__nameError"></p>
+          <label for="loginForm__password" class="loginForm__label">
+            Password
+          </label>
+          <input
+            type="password"
+            id="loginForm__password"
+            class="loginForm__input"
+            placeholder="Password"
+          />
+          <p class="loginForm__error" id="loginForm__passwordError"></p>
+          <button type="submit" class="loginForm__button">Continue</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

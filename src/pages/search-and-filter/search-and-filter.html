@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script type="module" src="../../components/header/header.js"></script>
+    <script type="module" src="./search-and-filter.js"></script>
+    <title>Search And Filter</title>
+  </head>
+  <body>
+    <main>
+      <section class="filterableList filterableList__container">
+        <label for="filterableList__input" class="filterableList__label"
+          >Filterable List
+        </label>
+        <input
+          type="text"
+          placeholder="Search..."
+          id="filterableList__input"
+          class="filterableList__input filterableList--border"
+        />
+        <ul class="filterableList__list" id="filterableList__list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
