@@ -41,18 +41,28 @@ const makeExchangeRatesList = function (params = {}) {
     });
 };
 
-const setExchangeRatesRefreshInterval = function (refreshIntervalMinutes = 15) {
+const makeRefreshingExchangeRatesList = function (
+  exchangeRatesRequestParams,
+  refreshIntervalMinutes = 15,
+) {
   const refreshIntervalMs = refreshIntervalMinutes * 60 * 1000;
   const lastUpdateElement = document.querySelector(
     ".currencyConverter__lastUpdate",
   );
 
-  lastUpdateElement.innerText = `
-    Updates every ${refreshIntervalMinutes} minutes. Last update: ${new Date().toLocaleString()}
-  `;
+  const updateLastUpdateElement = function () {
+    lastUpdateElement.innerText = `
+      Updates every ${refreshIntervalMinutes} minutes. Last update: ${new Date().toLocaleString()}
+    `;
+  };
 
-  setInterval(() => makeExchangeRatesList(endpoints), refreshIntervalMs);
+  updateLastUpdateElement();
+  makeExchangeRatesList(exchangeRatesRequestParams);
+
+  return setInterval(() => {
+    makeExchangeRatesList(exchangeRatesRequestParams);
+    updateLastUpdateElement();
+  }, refreshIntervalMs);
 };
 
-makeExchangeRatesList(requestParams);
-setExchangeRatesRefreshInterval();
+makeRefreshingExchangeRatesList(requestParams);
