@@ -41,8 +41,6 @@ const makeExchangeRatesList = function (params = {}) {
     });
 };
 
-const makeLastUpdateDate = function () {};
-
 const setExchangeRatesRefreshInterval = function (refreshIntervalMinutes = 15) {
   const refreshIntervalMs = refreshIntervalMinutes * 60 * 1000;
   const lastUpdateElement = document.querySelector(
@@ -53,10 +51,7 @@ const setExchangeRatesRefreshInterval = function (refreshIntervalMinutes = 15) {
     Updates every ${refreshIntervalMinutes} minutes. Last update: ${new Date().toLocaleString()}
   `;
 
-  setInterval(() => {
-    makeExchangeRatesList(endpoints);
-    makeLastUpdateDate();
-  }, refreshIntervalMs);
+  setInterval(() => makeExchangeRatesList(endpoints), refreshIntervalMs);
 };
 
 makeExchangeRatesList(requestParams);
